@@ -144,8 +144,8 @@ router.post('/cancelTicket', function (req, res) {
   );
 });
 
-
 router.post('/getSeats', (req, res) => {
+  console.log(req.body)
   Trains.find({_id:req.body.trainId}, (error, trains) => {
     if (error) {
       console.log(error)
